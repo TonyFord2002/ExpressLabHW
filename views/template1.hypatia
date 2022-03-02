@@ -1,7 +1,7 @@
 <head>
 #title#
 </head>
-<body>
+<body style="background-color:aqua">
 <header>#message#</header>
 <br>
 #content#

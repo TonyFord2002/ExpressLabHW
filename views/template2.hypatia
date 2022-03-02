@@ -3,5 +3,6 @@
 </head>
 <body>
 <header>#message#</header>
+<br>
 #content#
 </body>
