@@ -1,7 +1,7 @@
 <head>
 #title#
 </head>
-<body>
+<body #body#>
 <header>#message#</header>
 <br>
 #content#

@@ -9,6 +9,7 @@ app.engine('hypatia', (filePath, options, callback) => {
     if (err) return callback(err)
 
     const rendered = content.toString()
+      .replace('#body#', options.body)
       .replace('#title#', '<title>' + options.title + '</title>')
       .replace('#message#', options.message + '</h1>')
       .replace('#content#', options.content + '</div>' )
@@ -22,7 +23,7 @@ app.engine('hypatia', (filePath, options, callback) => {
   })
   
   app.get('/2', (req, res) => {
-	res.render('template2', { title: 'Page 2', message: "<h1>Welcome to the second page", content: 'This page is not styled like the first one.' })
+	res.render('template2', {body: "style ='background-color: red'",  title: 'Page 2', message: "<h1>Welcome to the second page", content: 'This page is not styled like the first one.' })
   })
   
   app.get('/3', (req, res) => {
